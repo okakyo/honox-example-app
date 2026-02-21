@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@source "../app";
+
+@theme {
+  --default-font-family: "Noto Sans JP", "Barlow", sans-serif;
+}

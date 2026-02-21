@@ -1,0 +1,27 @@
+{
+	"name": "hono-mini-app",
+	"type": "module",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build --mode client && vite build",
+		"preview": "$npm_execpath run build && wrangler dev",
+		"deploy": "$npm_execpath run build &&wrangler deploy --minify",
+		"cf-typegen": "wrangler types --env-interface CloudflareBindings"
+	},
+	"dependencies": {
+		"@hono/zod-validator": "^0.7.6",
+		"@tailwindcss/vite": "^4.2.0",
+		"hono": "^4.11.3",
+		"hono-openapi": "^1.1.2",
+		"honox": "^0.1.52",
+		"tailwindcss": "^4.2.0",
+		"zod": "^4.2.1"
+	},
+	"devDependencies": {
+		"@hono/vite-build": "^1.9.3",
+		"@hono/vite-dev-server": "^0.24.0",
+		"vite": "^7.3.0",
+		"vite-tsconfig-paths": "^6.1.1",
+		"wrangler": "^4.4.0"
+	}
+}
